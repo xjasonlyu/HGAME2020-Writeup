@@ -1,0 +1,249 @@
+babyPyc_task_e89562fbda.cpython-37.pyc (Python 3.7)
+[Disassembly]
+    0       LOAD_GLOBAL             0: print
+    2       LOAD_CONST              1: 'Give me the flag'
+    4       CALL_FUNCTION           1
+    6       POP_TOP
+    8       LOAD_GLOBAL             1: input
+    10      LOAD_CONST              2: '> '
+    12      CALL_FUNCTION           1
+    14      STORE_FAST              0: flag
+    16      LOAD_FAST               0: flag
+    18      LOAD_METHOD             2: encode
+    20      CALL_METHOD             0
+    22      STORE_FAST              0: flag
+    24      LOAD_CONST              3: b'QpeZYrN+Wr2iUZKYcZhvjbPcf4mfyL/tjtfNxM3JR3JPZX5Q'
+    26      STORE_GLOBAL            3: O0o
+    28      LOAD_FAST               0: flag
+    30      RETURN_VALUE  
+[Disassembly]
+    0       BUILD_LIST              0
+    2       LOAD_FAST               0: .0
+    4       FOR_ITER                20 (to 26)
+    6       STORE_FAST              1: row
+    8       LOAD_GLOBAL             0: raw_flag
+    10      LOAD_CONST              0: 6
+    12      LOAD_FAST               1: row
+    14      BINARY_MULTIPLY
+    16      LOAD_DEREF              0: col
+    18      BINARY_ADD
+    20      BINARY_SUBSCR
+    22      LIST_APPEND             2
+    24      JUMP_ABSOLUTE           4
+    26      RETURN_VALUE         
+[Disassembly]
+    0       BUILD_LIST              0
+    2       LOAD_FAST               0: .0
+    4       FOR_ITER                26 (to 32)
+    6       STORE_DEREF             0: col
+    8       LOAD_CLOSURE            0: col
+    10      BUILD_TUPLE             1
+    12      LOAD_CONST              0: <CODE> <listcomp>
+    14      LOAD_CONST              1: '<listcomp>.<listcomp>'
+    16      MAKE_FUNCTION           8
+    18      LOAD_GLOBAL             0: range
+    20      LOAD_CONST              2: 6
+    22      CALL_FUNCTION           1
+    24      GET_ITER
+    26      CALL_FUNCTION           1
+    28      LIST_APPEND             2
+    30      JUMP_ABSOLUTE           4
+    32      RETURN_VALUE
+[Disassembly]
+    0       JUMP_ABSOLUTE           2
+    2       LOAD_CONST              0: 0
+    4       LOAD_CONST              1: None
+    6       IMPORT_NAME             0: os
+    8       STORE_NAME              0: os
+    10      LOAD_CONST              0: 0
+    12      LOAD_CONST              1: None
+    14      IMPORT_NAME             1: sys
+    16      STORE_NAME              1: sys
+    18      LOAD_CONST              0: 0
+    20      LOAD_CONST              2: ('b64encode',)
+    22      IMPORT_NAME             2: base64
+    24      IMPORT_FROM             3: b64encode
+    26      STORE_NAME              3: b64encode
+    28      POP_TOP
+    30      LOAD_CONST              3: b'/KDq6pvN/LLq6tzM/KXq59Oh/MTqxtOTxdrqs8OoR3V1X09J'
+    32      STORE_GLOBAL            4: O0o                # O0o = b'/KDq6pvN/LLq6tzM/KXq59Oh/MTqxtOTxdrqs8OoR3V1X09J'
+    34      LOAD_CONST              4: <CODE> getFlag
+    36      LOAD_CONST              5: 'getFlag'
+    38      MAKE_FUNCTION           0
+    40      STORE_NAME              5: getFlag
+    42      LOAD_NAME               5: getFlag
+    44      CALL_FUNCTION           0
+    46      STORE_NAME              6: flag
+    48      LOAD_NAME               6: flag
+    50      LOAD_CONST              1: None
+    52      LOAD_CONST              6: 6
+    54      BUILD_SLICE             2
+    56      BINARY_SUBSCR
+    58      LOAD_CONST              7: b'hgame{'           # 格式判断
+    60      COMPARE_OP              3 (!=)
+    62      POP_JUMP_IF_TRUE        76
+    64      LOAD_NAME               6: flag
+    66      LOAD_CONST              8: -1
+    68      BINARY_SUBSCR
+    70      LOAD_CONST              9: 125
+    72      COMPARE_OP              3 (!=)
+    74      POP_JUMP_IF_FALSE       94
+    76      LOAD_NAME               7: print
+    78      LOAD_CONST              10: 'Incorrect format!'
+    80      CALL_FUNCTION           1
+    82      POP_TOP
+    84      LOAD_NAME               1: sys
+    86      LOAD_METHOD             8: exit
+    88      LOAD_CONST              11: 1
+    90      CALL_METHOD             1
+    92      POP_TOP
+    94      LOAD_NAME               6: flag
+    96      LOAD_CONST              6: 6
+    98      LOAD_CONST              8: -1
+    100     BUILD_SLICE             2
+    102     BINARY_SUBSCR
+    104     STORE_NAME              9: raw_flag      # 去掉 b'hgame{' and b'}' 的原始flag
+    106     LOAD_NAME               10: len
+    108     LOAD_NAME               6: flag
+    110     CALL_FUNCTION           1
+    112     LOAD_CONST              12: 7
+    114     BINARY_SUBTRACT
+    116     LOAD_CONST              13: 36           # 原始flag 长度为36
+    118     COMPARE_OP              3 (!=)
+    120     POP_JUMP_IF_FALSE       140
+    122     LOAD_NAME               7: print
+    124     LOAD_CONST              14: 'Wrong length!'
+    126     CALL_FUNCTION           1
+    128     POP_TOP
+    130     LOAD_NAME               1: sys
+    132     LOAD_METHOD             8: exit
+    134     LOAD_CONST              15: 2
+    136     CALL_METHOD             1
+    138     POP_TOP
+    140     LOAD_NAME               9: raw_flag
+    142     LOAD_CONST              1: None
+    144     LOAD_CONST              1: None
+    146     LOAD_CONST              8: -1
+    148     BUILD_SLICE             3                # raw_flag[::-1]
+    150     BINARY_SUBSCR
+    152     STORE_NAME              9: raw_flag
+###
+    154     LOAD_CONST              16: <CODE> <listcomp>
+    156     LOAD_CONST              17: '<listcomp>'
+    158     MAKE_FUNCTION           0
+    160     LOAD_NAME               11: range
+    162     LOAD_CONST              6: 6
+    164     CALL_FUNCTION           1
+    166     GET_ITER
+    168     CALL_FUNCTION           1
+    170     STORE_NAME              12: _ciphers
+# for row in range(5):
+    172     SETUP_LOOP              86 (to 260)
+    174     LOAD_NAME               11: range
+    176     LOAD_CONST              18: 5
+    178     CALL_FUNCTION           1
+    180     GET_ITER
+    182     FOR_ITER                74 (to 258)
+    184     STORE_NAME              13: row
+# for col in range(6):
+    186     SETUP_LOOP              68 (to 256)
+    188     LOAD_NAME               11: range
+    190     LOAD_CONST              6: 6
+    192     CALL_FUNCTION           1
+    194     GET_ITER
+    196     FOR_ITER                56 (to 254)
+    198     STORE_NAME              14: col
+#
+    200     LOAD_NAME               12: _ciphers
+    202     LOAD_NAME               13: row
+    204     BINARY_SUBSCR
+    206     LOAD_NAME               14: col
+    208     DUP_TOP_TWO
+    210     BINARY_SUBSCR
+
+    212     LOAD_NAME               12: _ciphers
+    214     LOAD_NAME               13: row
+    216     LOAD_CONST              11: 1
+    218     BINARY_ADD
+    220     BINARY_SUBSCR
+    222     LOAD_NAME               14: col
+    224     BINARY_SUBSCR
+    226     INPLACE_ADD
+    228     ROT_THREE
+    230     STORE_SUBSCR
+#-@
+    232     LOAD_NAME               12: _ciphers
+    234     LOAD_NAME               13: row
+    236     BINARY_SUBSCR
+    238     LOAD_NAME               14: col
+    240     DUP_TOP_TWO
+    242     BINARY_SUBSCR
+    244     LOAD_CONST              19: 256
+    246     INPLACE_MODULO
+    248     ROT_THREE
+    250     STORE_SUBSCR
+    252     JUMP_ABSOLUTE           196
+    254     POP_BLOCK
+    256     JUMP_ABSOLUTE           182
+    258     POP_BLOCK
+#
+    260     LOAD_CONST              20: b''
+    262     STORE_NAME              15: cipher
+###
+    264     SETUP_LOOP              70 (to 336)
+    266     LOAD_NAME               11: range
+    268     LOAD_CONST              6: 6
+    270     CALL_FUNCTION           1
+    272     GET_ITER
+    274     FOR_ITER                58 (to 334)
+    276     STORE_NAME              13: row
+    ###
+    278     LOAD_CONST              0: 0
+    280     STORE_NAME              14: col
+    282     SETUP_LOOP              46 (to 330)
+>>> 284     LOAD_NAME               14: col
+    286     LOAD_CONST              6: 6
+    288     COMPARE_OP              0 (<)
+    290     POP_JUMP_IF_FALSE       328
+#
+    294     LOAD_NAME               15: cipher
+    296     LOAD_NAME               16: bytes
+    298     LOAD_NAME               12: _ciphers
+    300     LOAD_NAME               13: row
+    302     BINARY_SUBSCR
+    304     LOAD_NAME               14: col
+    306     BINARY_SUBSCR
+    308     BUILD_LIST              1
+    310     CALL_FUNCTION           1
+    312     INPLACE_ADD
+    314     STORE_NAME              15: cipher
+#
+    316     LOAD_NAME               14: col
+    318     LOAD_CONST              11: 1
+    320     INPLACE_ADD
+    322     STORE_NAME              14: col
+#
+    324     JUMP_ABSOLUTE           284
+    328     POP_BLOCK
+    330     JUMP_ABSOLUTE           274
+    334     POP_BLOCK
+#
+    336     LOAD_NAME               3: b64encode
+    338     LOAD_NAME               15: cipher
+    340     CALL_FUNCTION           1
+    342     STORE_NAME              15: cipher
+    344     LOAD_NAME               15: cipher
+    346     LOAD_GLOBAL             4: O0o
+    348     COMPARE_OP              2 (==)
+    350     POP_JUMP_IF_FALSE       364
+    354     LOAD_NAME               7: print
+    356     LOAD_CONST              21: 'Great, this is my flag.'
+    358     CALL_FUNCTION           1
+    360     POP_TOP
+    362     JUMP_FORWARD            8 (to 372)
+    364     LOAD_NAME               7: print
+    366     LOAD_CONST              22: 'Wrong flag.'
+    368     CALL_FUNCTION           1
+    370     POP_TOP
+    372     LOAD_CONST              1: None
+    374     RETURN_VALUE
